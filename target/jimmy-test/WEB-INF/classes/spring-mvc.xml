@@ -12,7 +12,7 @@
        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"
        default-lazy-init="false">
     <!-- web层scan -->
-    <!--<context:component-scan base-package="com.baofu.test.web"/>-->
+    <context:component-scan base-package="controller"/>
 
     <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
         <property name="supportedMediaTypes">
@@ -27,7 +27,7 @@
     <mvc:annotation-driven/>
 
     <!-- 配置页面文件后缀名 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/pages/"
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="../webapp/view/"
           p:suffix=".jsp"/>
 
     <mvc:interceptors>

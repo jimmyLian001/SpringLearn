@@ -114,11 +114,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.baofoo.cache</groupId>
-            <artifactId>cache-facade</artifactId>
-            <version>1.0.8</version>
-        </dependency>
-        <dependency>
             <groupId>com.system.commons</groupId>
             <artifactId>commons</artifactId>
             <version>5.0.5</version>
