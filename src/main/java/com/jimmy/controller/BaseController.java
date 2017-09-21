@@ -1,4 +1,4 @@
-package controller;
+package com.jimmy.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ public class BaseController {
         ModelAndView mv;
         if ("jimmy".equals(username) & "123456".equals(password)) {
             log.info("用户登陆成功");
-            mv = new ModelAndView("redirect:/view/loginSuccess.jsp");//redirect模式
+            mv = new ModelAndView("redirect:/view/jsp/mcidInfoAdd.jsp");//redirect模式
             mv.addObject("message", "用户登陆成功！");
         } else {
             log.info("用户登陆失败");

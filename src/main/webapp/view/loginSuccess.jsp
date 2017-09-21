@@ -16,4 +16,7 @@
     <input type="text" id="username" name="username">
 </div>
 </body>
+<script  type="text/javascript">
+
+</script>
 </html>
