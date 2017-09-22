@@ -27,7 +27,8 @@ public class UserCheckController {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         ModelAndView mv;
-        if (userCheck(username, password)) {
+        Boolean userFlag = userCheck(username, password);
+        if (userFlag) {
             log.info("用户登陆成功");
             mv = new ModelAndView("redirect:/view/jsp/mcidInfoAdd.jsp");//redirect模式
             mv.addObject("message", "用户登陆成功！");
