@@ -53,6 +53,8 @@
           <element id="library" level="project" name="Maven: org.apache.avro:avro-ipc:1.7.3" />
           <element id="library" level="project" name="Maven: io.netty:netty:3.5.12.Final" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4.7" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
