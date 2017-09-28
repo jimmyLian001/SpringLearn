@@ -25,11 +25,19 @@
         </property>
     </bean>
 
+    <!--文件操作约束配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxUploadSize" value="10485760000"></property>
+        <property name="maxInMemorySize" value="40960"></property>
+    </bean>
+
     <!-- 配置需要过滤的静态资源 -->
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
 
     <!-- 配置页面文件后缀名 -->
+    <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="../webapp/view/"
           p:suffix=".jsp"/>
 

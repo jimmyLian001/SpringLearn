@@ -5,7 +5,8 @@
 
 <div class="searchDiv">
     <div id="btnDiv" style="height: 45px">
-        <button type="button" id="saveButton" class="l-button" style="margin-left: 38%;margin-top: 10px">保存</button>
+        <button type="button" id="fileButton"  onclick="javascript:window.location.href='fileUploadAndDown.jsp'"
+                class="l-button" style="margin-left: 38%;margin-top: 10px">跳转至文件上产页面 </button>
         <button type="button" id="colseWindow1" class="l-button" style="width: 90px">保存并记账</button>
         <button type="button" id="colseWindow" class="l-button">关闭</button>
         <br>
