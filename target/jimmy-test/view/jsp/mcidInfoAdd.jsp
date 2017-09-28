@@ -14,6 +14,14 @@
 <form id="emailForm" name="emailForm" enctype="multipart/form-data" onsubmit="send()">
     <div id="emailDiv">
         <tr>
+            <td>邮件主题：</td>
+            <td><input type="text" id="subject" name="subject"></td>
+        </tr>
+        <tr>
+            <td>邮件正文：</td>
+            <td><input type="text" id="content" style="width:300px;height: 60px" name="content"></td>
+        </tr>
+        <tr>
             <td>收件人：</td>
             <td><input type="text" id="emailTo" name="emailTo"></td>
         </tr>
@@ -39,15 +47,17 @@
                 url: "${ctx}/email/sendEmail.do", //表单提交目标
                 data: $('#emailForm').serialize(), //表单数据
                 success: function (msg) {
-                    if (msg == 'success') {//msg 是后台调用action时，你传过来的参数
+                    if (msg.success == true) {//msg 是后台调用action时，你传过来的参数
                         //do things here
-//                                window.close();
+                        alert("邮件发送成功");
+                        window.close();
                     } else {
+                        alert("邮件发送失败");
                         //do things here
                     }
                 },
                 error: function () {
-//                    alert("操作失败，请重试或联系管理员");
+                    alert("操作失败，请重试或联系管理员");
                 }
             });
             //return false; //阻止表单的默认提交事件

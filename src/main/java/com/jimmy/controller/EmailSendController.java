@@ -28,11 +28,18 @@ public class EmailSendController {
                                           HttpServletResponse response) throws Exception {
         log.info("邮件发送已经请求到后台");
         Map<String, Boolean> re = new HashMap<String, Boolean>(1);
+        String content = request.getParameter("content");
+        String subject = request.getParameter("subject");
         String emailTo = request.getParameter("emailTo");
         String emailCc = request.getParameter("emailCc");
-        Boolean resultBB=emailSendService.sendHtmlEmail(emailTo,emailCc);
-        Boolean result = resultBB.booleanValue();
-        re.put("tag", result);
+        try{
+            Boolean resultBB=emailSendService.sendHtmlEmail(content,subject,emailTo,emailCc);
+            Boolean result = resultBB.booleanValue();
+            re.put("success", result);
+        }catch(Exception e){
+            re.put("error",false);
+        }
+
         return re;
     }
 }

@@ -22,6 +22,8 @@ public class EmailSendServiceImpl implements EmailSendService {
     @Autowired
     private EmailService emailService;
 
+    String content = "默认邮件正文";
+    String subject = "默认邮件主题";
     /**
      * 发送包含格式的html邮件
      *
@@ -29,9 +31,13 @@ public class EmailSendServiceImpl implements EmailSendService {
      * @param emailCc 抄送人
      */
     @Override
-    public Boolean sendHtmlEmail(String emailTo, String emailCc) {
-        String content = "邮件正文";
-        String subject = "默认邮件主题";
+    public Boolean sendHtmlEmail(String content,String subject,String emailTo, String emailCc) {
+        if(content!=null){
+            this.content=content;
+        }
+        if(subject!=null){
+            this.subject=subject;
+        }
         List<String> emailToAddressList = emailAddressConvert(emailTo, ",");
         List<String> emailCcAddressList = emailAddressConvert(emailCc, ",");
         Boolean result = emailService.sendEmailHtml(content, emailToAddressList, emailCcAddressList, null, null, subject, null, null, null, "jimmyCompany");

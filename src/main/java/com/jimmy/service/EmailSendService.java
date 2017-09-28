@@ -9,8 +9,10 @@ public interface EmailSendService {
 
     /**
      * 发送包含格式的html邮件
+     * @param content
+     * @param subject
      * @param emailTo 收件人
      * @param emailCc 抄送人
      */
-    Boolean sendHtmlEmail(String emailTo, String emailCc);
+    Boolean sendHtmlEmail(String content,String subject,String emailTo, String emailCc);
 }
