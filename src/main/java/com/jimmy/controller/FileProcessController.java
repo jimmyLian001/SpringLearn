@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.FileInputStream;
@@ -21,7 +22,7 @@ import java.util.Date;
 public class FileProcessController {
 
     @RequestMapping("upload.do")
-    public String fileUpload(@RequestParam("uploadFile") CommonsMultipartFile[] files, HttpServletRequest request){
+    public ModelAndView fileUpload(@RequestParam("uploadFile") CommonsMultipartFile[] files, HttpServletRequest request){
 
         for(int i = 0;i<files.length;i++){
             log.info("fileName---------->" + files[i].getOriginalFilename());
@@ -51,6 +52,8 @@ public class FileProcessController {
                 }
             }
         }
-        return "/mcidInfoAdd";
+        ModelAndView mv = new ModelAndView("redirect:/view/jsp/mcidInfoAdd.jsp");//默认为forward模式
+        mv.addObject("message", "文件上传成功！");
+        return mv;
     }
     }
