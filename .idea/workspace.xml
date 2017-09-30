@@ -9,10 +9,7 @@
     <list default="true" id="e7369a15-02d8-42fe-ba7f-42529b0edb08" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/jimmy/controller/FileProcessController.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/jimmy/controller/UserCheckController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jimmy/controller/FileProcessController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jimmy/controller/FileProcessController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/jsp/fileUploadAndDown.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/jsp/fileUploadAndDown.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jimmy-test/view/jsp/fileUploadAndDown.jsp" afterPath="$PROJECT_DIR$/target/jimmy-test/view/jsp/fileUploadAndDown.jsp" />
     </list>
     <ignored path="spring_learn1.iws" />
@@ -36,11 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fileUploadAndDown.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fileUploadAndDown.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/fileUploadAndDown.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3305786">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            <state vertical-scroll-proportion="-8.676471">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fileUploadAndDown.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/target/jimmy-test/view/jsp/fileUploadAndDown.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.0743802">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -1025,7 +1032,7 @@
       <workItem from="1506578018116" duration="600000" />
       <workItem from="1506600333575" duration="3575000" />
       <workItem from="1506744062859" duration="1815000" />
-      <workItem from="1506745941522" duration="1866000" />
+      <workItem from="1506745941522" duration="1949000" />
     </task>
     <task id="LOCAL-00001" summary="说明修改">
       <created>1506420647197</created>
@@ -1063,11 +1070,17 @@
       <option name="project" value="LOCAL" />
       <updated>1506744959340</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="说明修改">
+      <created>1506747821463</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506747821463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70637000" />
+    <option name="totallyTimeSpent" value="70720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1137,14 +1150,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties/database.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1481,8 +1486,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/fileUploadAndDown.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3305786">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state vertical-scroll-proportion="-8.676471">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/jimmy-test/view/jsp/fileUploadAndDown.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0743802">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
