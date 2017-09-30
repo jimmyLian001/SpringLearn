@@ -37,16 +37,6 @@ public class UserCheckController {
             mv = new ModelAndView("redirect:/view/loginError.jsp");//redirect模式
             mv.addObject("message", "用户登陆失败！");
         }
-//        if ("jimmy".equals(username) & "123456".equals(password)) {
-//            log.info("用户登陆成功");
-//            mv = new ModelAndView("redirect:/view/jsp/mcidInfoAdd.jsp");//redirect模式
-//            mv.addObject("message", "用户登陆成功！");
-//        } else {
-//            log.info("用户登陆失败");
-//            mv = new ModelAndView("redirect:/view/loginError.jsp");//redirect模式
-//            mv.addObject("message", "用户登陆失败！");
-//        }
-
         return mv;
     }
 
