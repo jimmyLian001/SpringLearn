@@ -31,7 +31,7 @@ public class FileProcessController {
                 int pre = (int) System.currentTimeMillis();
                 try {
                     //拿到输出流，同时重命名上传的文件
-                    FileOutputStream os = new FileOutputStream("E:/" + new Date().getTime() + files[i].getOriginalFilename());
+                    FileOutputStream os = new FileOutputStream("E:/jimmyFile/" + new Date().getTime() + files[i].getOriginalFilename());
                     //拿到上传文件的输入流
                     FileInputStream in = (FileInputStream) files[i].getInputStream();
 
