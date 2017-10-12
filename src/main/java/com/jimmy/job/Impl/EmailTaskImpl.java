@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 /**
- * <p>
+ * <p>邮件服务定时任务
  * User: lian zd Date:2017/10/12 ProjectName: spring_learn1 Version: 1.0
  */
 @Service
