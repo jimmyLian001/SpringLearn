@@ -26,7 +26,7 @@ public class EmailTaskImpl implements EmailTask {
      * 定时发送邮件 每天下午1:30 发送 corn：0 30 13 * * ?
      */
     @Override
-    @Scheduled(cron = "0 13 13 * * ?")
+    @Scheduled(cron = "0 21 13 * * ?")
     public void sendEmailByScheduled() {
         MDC.put(SystemMarker.TRACE_LOG_ID, UUID.randomUUID().toString());
         String content = "你好，我在使用定时任务发送邮件";
