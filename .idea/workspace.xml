@@ -9,9 +9,6 @@
     <list default="true" id="e7369a15-02d8-42fe-ba7f-42529b0edb08" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jimmy/job/Impl/EmailTaskImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jimmy/job/Impl/EmailTaskImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jimmy-test/WEB-INF/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/jimmy-test/WEB-INF/classes/spring-mvc.xml" />
     </list>
     <ignored path="spring_learn1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,21 +64,11 @@
       <file leaf-file-name="EmailTaskImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jimmy/job/Impl/EmailTaskImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57589984">
-              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state vertical-scroll-proportion="1.0453835">
+              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.235294">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1120,7 +1107,7 @@
       <workItem from="1506600333575" duration="3575000" />
       <workItem from="1506744062859" duration="1815000" />
       <workItem from="1506745941522" duration="3487000" />
-      <workItem from="1507777948547" duration="3118000" />
+      <workItem from="1507777948547" duration="3432000" />
     </task>
     <task id="LOCAL-00001" summary="说明修改">
       <created>1506420647197</created>
@@ -1188,11 +1175,17 @@
       <option name="project" value="LOCAL" />
       <updated>1506749066027</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="添加定时任务Spring配置">
+      <created>1507784891642</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1507784891642</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75376000" />
+    <option name="totallyTimeSpent" value="75690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1249,7 +1242,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="说明修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="说明修改" />
+    <MESSAGE value="添加定时任务Spring配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加定时任务Spring配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1590,14 +1584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.235294">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35273367">
@@ -1606,10 +1592,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17985612">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jimmy/job/Impl/EmailTaskImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57589984">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state vertical-scroll-proportion="1.0453835">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

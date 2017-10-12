@@ -3,9 +3,13 @@ package com.jimmy.job.Impl;
 import com.jimmy.job.EmailTask;
 import com.jimmy.service.EmailSendService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
+import org.slf4j.helpers.SystemMarker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+
+import java.util.UUID;
 
 /**
  * <p>
@@ -22,8 +26,9 @@ public class EmailTaskImpl implements EmailTask {
      * 定时发送邮件 每天下午1:30 发送 corn：0 30 13 * * ?
      */
     @Override
-    @Scheduled(cron = "0 09 13 * * ?")
+    @Scheduled(cron = "0 13 13 * * ?")
     public void sendEmailByScheduled() {
+        MDC.put(SystemMarker.TRACE_LOG_ID, UUID.randomUUID().toString());
         String content = "你好，我在使用定时任务发送邮件";
         String subject = "默认主题";
         String emailTo = "tieshou@baofoo.com";
