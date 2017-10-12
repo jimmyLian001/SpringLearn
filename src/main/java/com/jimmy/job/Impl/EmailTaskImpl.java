@@ -22,7 +22,7 @@ public class EmailTaskImpl implements EmailTask {
      * 定时发送邮件 每天下午1:30 发送 corn：0 30 13 * * ?
      */
     @Override
-    @Scheduled(cron = "0 0/5 * * * ?")
+    @Scheduled(cron = "0 09 13 * * ?")
     public void sendEmailByScheduled() {
         String content = "你好，我在使用定时任务发送邮件";
         String subject = "默认主题";
