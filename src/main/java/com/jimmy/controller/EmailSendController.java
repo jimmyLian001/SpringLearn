@@ -1,6 +1,5 @@
 package com.jimmy.controller;
 
-import com.jimmy.common.EmailService;
 import com.jimmy.service.EmailSendService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

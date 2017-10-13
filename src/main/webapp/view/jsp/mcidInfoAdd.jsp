@@ -2,40 +2,46 @@
 <script src="../utils/jquery.js" type="text/javascript"></script>
 <br><br>
 <br><br>
+<center>
+    <div class="searchDiv">
+        <h1 style="color:red">应用入口</h1>
+        <div id="btnDiv" style="height: 45px">
+            <button type="button" id="fileButton"  onclick="javascript:window.location.href='fileUploadAndDown.jsp'"
+                    class="l-button" style="margin-left: 02%;margin-top: 10px">跳转至文件上产页面 </button>
+            <button type="button" id="jfreeButton"  onclick="javascript:window.location.href='jfreeChart.jsp'"
+                    class="l-button" style="width: 150px">跳转JfreeChart页面</button>
+            <button type="button" id="colseWindow1" class="l-button" style="width: 90px">保存并记账</button>
+            <button type="button" id="colseWindow" class="l-button">关闭</button>
+            <br>
+        </div>
+    </div>
+    <form id="emailForm" name="emailForm" enctype="multipart/form-data" onsubmit="send()">
+        <div id="emailDiv">
+            <tr>
+                <td>邮件主题：</td>
+                <td><input type="text" id="subject" name="subject"></td>
+            </tr>
+            <tr>
+                <td>邮件正文：</td>
+                <td><input type="text" id="content" style="width:300px;height: 60px" name="content"></td>
+            </tr>
+            <tr>
+                <td>收件人：</td>
+                <td><input type="text" id="emailTo" name="emailTo"></td>
+            </tr>
+            <tr>
+                <td>抄送人：</td>
+                <td><input type="text" id="emailCc" name="emailCc"></td>
+            </tr>
+            <tr>
+                <%--<td></td>--%>
+                <input type="button" onclick="javascript:send()" value="发送" style="color:#138F8F">
+            </tr>
+        </div>
+    </form>
 
-<div class="searchDiv">
-    <div id="btnDiv" style="height: 45px">
-        <button type="button" id="fileButton"  onclick="javascript:window.location.href='fileUploadAndDown.jsp'"
-                class="l-button" style="margin-left: 38%;margin-top: 10px">跳转至文件上产页面 </button>
-        <button type="button" id="colseWindow1" class="l-button" style="width: 90px">保存并记账</button>
-        <button type="button" id="colseWindow" class="l-button">关闭</button>
-        <br>
-    </div>
-</div>
-<form id="emailForm" name="emailForm" enctype="multipart/form-data" onsubmit="send()">
-    <div id="emailDiv">
-        <tr>
-            <td>邮件主题：</td>
-            <td><input type="text" id="subject" name="subject"></td>
-        </tr>
-        <tr>
-            <td>邮件正文：</td>
-            <td><input type="text" id="content" style="width:300px;height: 60px" name="content"></td>
-        </tr>
-        <tr>
-            <td>收件人：</td>
-            <td><input type="text" id="emailTo" name="emailTo"></td>
-        </tr>
-        <tr>
-            <td>抄送人：</td>
-            <td><input type="text" id="emailCc" name="emailCc"></td>
-        </tr>
-        <tr>
-            <%--<td></td>--%>
-            <input type="button" onclick="javascript:send()" value="发送" style="color:#138F8F">
-        </tr>
-    </div>
-</form>
+</center>
+
 <script type="text/javascript">
     window.onload = function () {
 //        alert("hello world");
