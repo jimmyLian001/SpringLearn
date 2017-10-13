@@ -12,7 +12,12 @@
 </head>
 <body>
 
-<%--<h1 style="color:red">图标绘图操作</h1>--%>
+<h1 style="color:red">图标绘图操作</h1>
+<div>
+    <br>
+    <br>
+    <img src="${chartURL}"  width=600 height=400  border=0>
+</div>
 <%--<form id="chartForm" name="chartForm" enctype="multipart/form-data" action="${ctx}/chart/Kline.do" method="post">--%>
     <%--<div id="chartDiv">--%>
         <%--<tr>--%>

@@ -1,20 +1,23 @@
 package com.jimmy.common.impl;
 
-import java.awt.Color;
-import java.text.SimpleDateFormat;
-import java.awt.Paint;
-import org.jfree.data.time.*;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.*;
+import org.jfree.chart.plot.CombinedDomainXYPlot;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.CandlestickRenderer;
+import org.jfree.chart.renderer.xy.XYBarRenderer;
 import org.jfree.data.time.Day;
+import org.jfree.data.time.TimeSeries;
+import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.time.ohlc.OHLCSeries;
 import org.jfree.data.time.ohlc.OHLCSeriesCollection;
-import org.jfree.chart.renderer.xy.*;
-import org.jfree.chart.axis.*;
-import org.jfree.chart.plot.*;
-import org.jfree.chart.*;
 
-import javax.swing.*;
+import java.awt.*;
+import java.text.SimpleDateFormat;
 
-public class KLineCombineChart extends JApplet{
+
+public class KLineCombineChartImpl {
 
 public static void main(String[] args) {
      SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//
@@ -89,76 +92,78 @@ public static void main(String[] args) {
      TimeSeriesCollection timeSeriesCollection=new TimeSeriesCollection();//
      timeSeriesCollection.addSeries(series2);
 
-     //
-     int seriesCount = seriesCollection.getSeriesCount();//
-     for (int i = 0; i < seriesCount; i++) {
-      int itemCount = seriesCollection.getItemCount(i);//
-      for (int j = 0; j < itemCount; j++) {
-       if (highValue < seriesCollection.getHighValue(i, j)) {//
-        highValue = seriesCollection.getHighValue(i, j);
-       }
-       if (minValue > seriesCollection.getLowValue(i, j)) {//
-        minValue = seriesCollection.getLowValue(i, j);
-       }
-      }
+        //
+        int seriesCount = seriesCollection.getSeriesCount();//
+        for (int i = 0; i < seriesCount; i++) {
+            int itemCount = seriesCollection.getItemCount(i);//
+            for (int j = 0; j < itemCount; j++) {
+                if (highValue < seriesCollection.getHighValue(i, j)) {//
+                    highValue = seriesCollection.getHighValue(i, j);
+                }
+                if (minValue > seriesCollection.getLowValue(i, j)) {//
+                    minValue = seriesCollection.getLowValue(i, j);
+                }
+            }
 
-     }
-     //
-     int seriesCount2 = timeSeriesCollection.getSeriesCount();//
-     for (int i = 0; i < seriesCount2; i++) {
-      int itemCount = timeSeriesCollection.getItemCount(i);//
-      for (int j = 0; j < itemCount; j++) {
-       if (high2Value < timeSeriesCollection.getYValue(i,j)) {//
-        high2Value = timeSeriesCollection.getYValue(i,j);
-       }
-       if (min2Value > timeSeriesCollection.getYValue(i, j)) {//
-        min2Value = timeSeriesCollection.getYValue(i, j);
-       }
-      }
+        }
+        //
+        int seriesCount2 = timeSeriesCollection.getSeriesCount();//
+        for (int i = 0; i < seriesCount2; i++) {
+            int itemCount = timeSeriesCollection.getItemCount(i);//
+            for (int j = 0; j < itemCount; j++) {
+                if (high2Value < timeSeriesCollection.getYValue(i, j)) {//
+                    high2Value = timeSeriesCollection.getYValue(i, j);
+                }
+                if (min2Value > timeSeriesCollection.getYValue(i, j)) {//
+                    min2Value = timeSeriesCollection.getYValue(i, j);
+                }
+            }
 
-     }
-     final CandlestickRenderer candlestickRender=new CandlestickRenderer();//
-     candlestickRender.setUseOutlinePaint(true); //
-     candlestickRender.setAutoWidthMethod(CandlestickRenderer.WIDTHMETHOD_AVERAGE);//
-     candlestickRender.setAutoWidthGap(0.001);//
-     candlestickRender.setUpPaint(Color.RED);//
-     candlestickRender.setDownPaint(Color.GREEN);//
-     DateAxis x1Axis=new DateAxis();//
-     x1Axis.setAutoRange(false);//
-     try{
-      x1Axis.setRange(dateFormat.parse("2007-08-20"),dateFormat.parse("2007-09-29"));//
-     }catch(Exception e){
-      e.printStackTrace();
-     }
-     x1Axis.setTimeline(SegmentedTimeline.newMondayThroughFridayTimeline());//
-     x1Axis.setAutoTickUnitSelection(false);//
-     x1Axis.setTickMarkPosition(DateTickMarkPosition.MIDDLE);//
-     x1Axis.setStandardTickUnits(DateAxis.createStandardDateTickUnits());//
-     x1Axis.setTickUnit(new DateTickUnit(DateTickUnit.DAY,7));//
-     x1Axis.setDateFormatOverride(new SimpleDateFormat("yyyy-MM-dd"));//
-     NumberAxis y1Axis=new NumberAxis();//
-     y1Axis.setAutoRange(false);//
-     y1Axis.setRange(minValue*0.9, highValue*1.1);//
-     y1Axis.setTickUnit(new NumberTickUnit((highValue*1.1-minValue*0.9)/10));//
-     XYPlot plot1=new XYPlot(seriesCollection,x1Axis,y1Axis,candlestickRender);//
-  
-     XYBarRenderer xyBarRender=new XYBarRenderer(){
-     private static final long serialVersionUID = 1L;//
-     public Paint getItemPaint(int i, int j){//
-       if(seriesCollection.getCloseValue(i,j)>seriesCollection.getOpenValue(i,j)){//
-        return candlestickRender.getUpPaint();
-       }else{
-        return candlestickRender.getDownPaint();
-       }
-     }};
-     xyBarRender.setMargin(0.1);//
-     NumberAxis y2Axis=new NumberAxis();//
-     y2Axis.setAutoRange(false);
-     y2Axis.setRange(min2Value*0.9, high2Value*1.1);
-     y2Axis.setTickUnit(new NumberTickUnit((high2Value*1.1-min2Value*0.9)/4));
-     XYPlot plot2=new XYPlot(timeSeriesCollection,null,y2Axis,xyBarRender);//
-     CombinedDomainXYPlot combineddomainxyplot = new CombinedDomainXYPlot(x1Axis);//
-     combineddomainxyplot.add(plot1, 2);//
+        }
+        final CandlestickRenderer candlestickRender = new CandlestickRenderer();//
+        candlestickRender.setUseOutlinePaint(true); //
+        candlestickRender.setAutoWidthMethod(CandlestickRenderer.WIDTHMETHOD_AVERAGE);//
+        candlestickRender.setAutoWidthGap(0.001);//
+        candlestickRender.setUpPaint(Color.RED);//
+        candlestickRender.setDownPaint(Color.GREEN);//
+        DateAxis x1Axis = new DateAxis();//
+        x1Axis.setAutoRange(false);//
+        try {
+            x1Axis.setRange(dateFormat.parse("2007-08-20"), dateFormat.parse("2007-09-29"));//
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        x1Axis.setTimeline(SegmentedTimeline.newMondayThroughFridayTimeline());//
+        x1Axis.setAutoTickUnitSelection(false);//
+        x1Axis.setTickMarkPosition(DateTickMarkPosition.MIDDLE);//
+        x1Axis.setStandardTickUnits(DateAxis.createStandardDateTickUnits());//
+        x1Axis.setTickUnit(new DateTickUnit(DateTickUnit.DAY, 7));//
+        x1Axis.setDateFormatOverride(new SimpleDateFormat("yyyy-MM-dd"));//
+        NumberAxis y1Axis = new NumberAxis();//
+        y1Axis.setAutoRange(false);//
+        y1Axis.setRange(minValue * 0.9, highValue * 1.1);//
+        y1Axis.setTickUnit(new NumberTickUnit((highValue * 1.1 - minValue * 0.9) / 10));//
+        XYPlot plot1 = new XYPlot(seriesCollection, x1Axis, y1Axis, candlestickRender);//
+
+        XYBarRenderer xyBarRender = new XYBarRenderer() {
+            private static final long serialVersionUID = 1L;//
+
+            public Paint getItemPaint(int i, int j) {//
+                if (seriesCollection.getCloseValue(i, j) > seriesCollection.getOpenValue(i, j)) {//
+                    return candlestickRender.getUpPaint();
+                } else {
+                    return candlestickRender.getDownPaint();
+                }
+            }
+        };
+        xyBarRender.setMargin(0.1);//
+        NumberAxis y2Axis = new NumberAxis();//
+        y2Axis.setAutoRange(false);
+        y2Axis.setRange(min2Value * 0.9, high2Value * 1.1);
+        y2Axis.setTickUnit(new NumberTickUnit((high2Value * 1.1 - min2Value * 0.9) / 4));
+        XYPlot plot2 = new XYPlot(timeSeriesCollection, null, y2Axis, xyBarRender);//
+        CombinedDomainXYPlot combineddomainxyplot = new CombinedDomainXYPlot(x1Axis);//
+        combineddomainxyplot.add(plot1, 2);//
         combineddomainxyplot.add(plot2, 1);//
         combineddomainxyplot.setGap(10);//
         JFreeChart chart = new JFreeChart("汇率K线图", JFreeChart.DEFAULT_TITLE_FONT, combineddomainxyplot, false);

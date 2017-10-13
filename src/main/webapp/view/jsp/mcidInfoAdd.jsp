@@ -8,7 +8,7 @@
         <div id="btnDiv" style="height: 45px">
             <button type="button" id="fileButton"  onclick="javascript:window.location.href='fileUploadAndDown.jsp'"
                     class="l-button" style="margin-left: 02%;margin-top: 10px">跳转至文件上产页面 </button>
-            <button type="button" id="jfreeButton"  onclick="javascript:window.location.href='jfreeChart.jsp'"
+            <button type="button" id="jfreeButton"  onclick="javascript:window.location.href='${ctx}/fileOs/getColumnChart.do'"
                     class="l-button" style="width: 150px">跳转JfreeChart页面</button>
             <button type="button" id="colseWindow1" class="l-button" style="width: 90px">保存并记账</button>
             <button type="button" id="colseWindow" class="l-button">关闭</button>

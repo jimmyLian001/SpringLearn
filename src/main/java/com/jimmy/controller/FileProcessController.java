@@ -1,7 +1,11 @@
 package com.jimmy.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.servlet.ServletUtilities;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -11,6 +15,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.Date;
 import java.util.Iterator;
@@ -23,6 +28,7 @@ import java.util.Iterator;
 @Slf4j
 @RequestMapping("/fileOs/")
 public class FileProcessController {
+
 
     @RequestMapping("upload.do")
     public ModelAndView fileUpload(@RequestParam("uploadFile") CommonsMultipartFile[] files, HttpServletRequest request) {
@@ -148,5 +154,21 @@ public class FileProcessController {
         return modelAndView;
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @param modelMap
+     * @return
+     * @throws Exception
+     */
+//    @RequestMapping("getColumnChart.do")
+//    public ModelAndView getColumnChart(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap) throws Exception {
+//        JFreeChart chart = kLineCombineChart.getChart();
+//        String fileName = ServletUtilities.saveChartAsJPEG(chart, 700, 400, null, request.getSession());
+//        String chartURL=request.getContextPath() + "/chart?filename="+fileName;
+//        modelMap.put("chartURL", chartURL);
+//        return new ModelAndView("redirect:/view/jsp/jfreeChart.jsp",modelMap);
+//    }
 
 }
