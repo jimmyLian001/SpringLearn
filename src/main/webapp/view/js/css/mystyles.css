@@ -1,0 +1,9 @@
+/* please use this file for your own styles 
+ * it's need for easiest update of newest wersions
+*/
+.widget iframe {
+	border:none;	
+	border-collapse:collapse;
+}
+
+.pagePrompts {z-index:999;position:absolute;}
