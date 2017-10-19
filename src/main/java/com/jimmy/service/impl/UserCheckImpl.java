@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserCheckImpl implements UserCheck {
 
-    @Autowired
+    @Autowired(required = false)
     private UserCheckMapper userCheckMapper;
 
     /**

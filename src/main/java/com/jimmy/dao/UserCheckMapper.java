@@ -1,6 +1,10 @@
 package com.jimmy.dao;
 
+import com.jimmy.controller.form.DataOperateForm;
 import com.jimmy.entity.UserInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -8,4 +12,6 @@ import com.jimmy.entity.UserInfo;
  */
 public interface UserCheckMapper {
     UserInfo getUserInfo(UserInfo userInfo);
+
+    List<UserInfo> queryUserInfo(@Param("en") DataOperateForm dataOperateForm);
 }
