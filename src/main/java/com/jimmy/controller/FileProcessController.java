@@ -1,11 +1,10 @@
 package com.jimmy.controller;
 
+import com.jimmy.model.AdminRevealResultModel;
+import com.jimmy.model.BaseModel;
+import com.jimmy.model.SmallChartPluginEntity;
 import lombok.extern.slf4j.Slf4j;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.servlet.ServletUtilities;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,8 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.util.Date;
-import java.util.Iterator;
+import java.util.*;
 
 /**
  * <p>
@@ -158,17 +156,27 @@ public class FileProcessController {
      *
      * @param request
      * @param response
-     * @param modelMap
      * @return
      * @throws Exception
      */
-//    @RequestMapping("getColumnChart.do")
-//    public ModelAndView getColumnChart(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap) throws Exception {
+    @RequestMapping("getColumnChart.do")
+    public AdminRevealResultModel getColumnChart(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        AdminRevealResultModel model = new AdminRevealResultModel();
+        SmallChartPluginEntity smallChartResult=new SmallChartPluginEntity();
+        List<Map<String, Object>> retList = new ArrayList<>();
+        Map<String, Object> map =new HashMap<>();
+        map.put("1","hello");
+        map.put("2","world");
+        retList.add(map);
+        smallChartResult.setSmallResultList(retList);
+        model.setSmallChartResult(smallChartResult);
+        log.info("请求进入后台");
 //        JFreeChart chart = kLineCombineChart.getChart();
 //        String fileName = ServletUtilities.saveChartAsJPEG(chart, 700, 400, null, request.getSession());
 //        String chartURL=request.getContextPath() + "/chart?filename="+fileName;
 //        modelMap.put("chartURL", chartURL);
-//        return new ModelAndView("redirect:/view/jsp/jfreeChart.jsp",modelMap);
-//    }
+        model.setRetCode(BaseModel.OK);
+        return  model;
+    }
 
 }
