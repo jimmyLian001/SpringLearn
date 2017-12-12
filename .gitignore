@@ -5,7 +5,7 @@
 .settings
 .idea
 .idea/*.xml
-.idea/workspace.xml
+workspace.xml
 */*.iml      
  ##filter databfile��sln file##
 *.mdb  
