@@ -22,9 +22,30 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: com.baofoo.cache:cache-facade:1.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/baofoo/baofoo-commons/1.0-SNAPSHOT/baofoo-commons-1.0-20160406.083606-4.jar" output-file-name="baofoo-commons-1.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
           <element id="library" level="project" name="Maven: com.system.commons:commons:5.0.5" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.9.1" />
+          <element id="library" level="project" name="Maven: net.sf.dozer:dozer:5.4.0" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.3" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.6" />
           <element id="library" level="project" name="Maven: com.system.logback:logback:1.0.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.0.13" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.0.13" />
+          <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.5" />
+          <element id="library" level="project" name="Maven: org.apache.flume:flume-ng-sdk:1.5.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.avro:avro:1.7.3" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.8.8" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.8.8" />
+          <element id="library" level="project" name="Maven: com.thoughtworks.paranamer:paranamer:2.3" />
+          <element id="library" level="project" name="Maven: org.xerial.snappy:snappy-java:1.0.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.avro:avro-ipc:1.7.3" />
+          <element id="library" level="project" name="Maven: io.netty:netty:3.5.12.Final" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.0.1.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.1.GA" />
