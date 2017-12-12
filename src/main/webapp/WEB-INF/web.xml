@@ -27,6 +27,9 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    <session-config>
+        <session-timeout>180</session-timeout>
+    </session-config>
 </web-app>

@@ -6,10 +6,10 @@
     </contextListener>
 
     <jmxConfigurator/>
-
+    <conversionRule conversionWord="tracelogid" converterClass="com.system.ext.logback.converter.TraceLogIdConverter"/>
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>logbak: %d{HH:mm:ss.SSS} %logger{36} - %msg%n</pattern>
+            <pattern>logbak: %d{HH:mm:ss.SSS} %-5level %tracelogid %logger{36} %line - %msg%n</pattern>
         </encoder>
     </appender>
 

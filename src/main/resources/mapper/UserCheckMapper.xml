@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jimmy.dao.UserCheckMapper">
+
+    <resultMap id="ResultMapTest" type="com.jimmy.entity.UserInfo">
+        <id column="ID"                     property="id"               jdbcType="BIGINT"/>
+        <result column="USERNAME"           property="userName"         jdbcType="VARCHAR"/>
+        <result column="PASSWORD"           property="passWord"         jdbcType="VARCHAR"/>
+        <result column="CREATE_AT"          property="createAt"         jdbcType="TIMESTAMP"/>
+        <result column="CLASS"              property="classLevel"       jdbcType="TINYINT"/>
+        <result column="SEX"                property="sex"              jdbcType="VARCHAR"/>
+        <result column="ID_NO"              property="idNo"             jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,
+        USERNAME,
+        PASSWORD,
+        CREATE_AT,
+        CLASS,
+        SEX,
+        ID_NO
+    </sql>
+
+    <select id="getUserInfo" parameterType="com.jimmy.entity.UserInfo" resultType="com.jimmy.entity.UserInfo">
+        SELECT
+        username AS userName,
+        password AS passWord
+        from study
+        where username = #{userName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryUserInfo" parameterType="com.jimmy.controller.form.DataOperateForm" resultMap="ResultMapTest">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM study
+        where 1=1
+        <if test="en.beginTime!=null and en.beginTime !=''">
+            AND  CREATE_AT &gt; = #{en.beginTime}
+        </if>
+        <if test="en.endTime!=null and en.endTime != ''">
+            AND  CREATE_AT &lt; = #{en.endTime}
+        </if>
+        <if test="en.idNo !=null and en.idNo !=''">
+            AND  ID_NO  = #{en.idNo}
+        </if>
+        ORDER BY CREATE_AT DESC
+    </select>
+    <!--<insert id="insert" parameterType="com.baofu.cbpayservice.dal.models.TPayeeAccountDo">-->
+        <!--INSERT INTO T_PAYEE_ACCOUNT (-->
+            <!--ID,-->
+            <!--APPLY_ID,-->
+            <!--MEMBER_ACC_NO,-->
+            <!--BANK_ACC_NO,-->
+            <!--ROUTING_NUMBER,-->
+            <!--MEMBER_ID,-->
+            <!--CCY,-->
+            <!--WALLET_ID,-->
+            <!--STATUS,-->
+            <!--REMARKS,-->
+            <!--CREATE_AT,-->
+            <!--CREATE_BY,-->
+            <!--UPDATE_AT,-->
+            <!--UPDATE_BY-->
+        <!--) VALUES(-->
+            <!--#{id,jdbcType=BIGINT},-->
+            <!--#{applyId,jdbcType=BIGINT},-->
+            <!--#{memberAccNo,jdbcType=VARCHAR},-->
+            <!--#{bankAccNo,jdbcType=VARCHAR},-->
+            <!--#{routingNumber,jdbcType=VARCHAR},-->
+            <!--#{memberId,jdbcType=BIGINT},-->
+            <!--#{ccy,jdbcType=CHAR},-->
+            <!--#{walletId,jdbcType=VARCHAR},-->
+            <!--#{status,jdbcType=TINYINT},-->
+            <!--#{remarks,jdbcType=VARCHAR},-->
+            <!--NOW(),-->
+            <!--#{createBy,jdbcType=VARCHAR},-->
+            <!--NOW(),-->
+            <!--#{updateBy,jdbcType=VARCHAR})-->
+  <!--</insert>-->
+
+
+</mapper>
