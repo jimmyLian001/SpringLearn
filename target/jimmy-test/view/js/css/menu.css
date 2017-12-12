@@ -1,0 +1,59 @@
+.icom-xz,.icom-xz1,.icom-xz2,.icom-xz3,.icom-xz4,.icom-xz5,.icom-xz6,.icom-xz7,.icom-xz8,.icom-xz9,.icom-xz11,.icom-xz12{
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	background-image: url('../img/icons/icons.png');
+	background-repeat: no-repeat;
+}
+
+.icom-xz{
+background-position: -1024px -1088px;
+}
+
+.icom-xz1{
+background-position: -1088px -1088px;
+}
+
+.icom-xz2{
+background-position: -1152px -1088px;
+}
+
+.icom-xz3{
+background-position: -1216px -1088px;
+}
+
+.icom-xz4{
+background-position: 0 -1152px;
+}
+
+.icom-xz5{
+background-position: -64px -1152px;
+}
+
+.icom-xz6{
+background-position: -128px -1152px;
+}
+
+.icom-xz7{
+background-position: -192px -1152px;
+}
+
+.icom-xz8{
+background-position: -256px -1152px;
+}
+
+.icom-xz9{
+background-position: -320px -1152px;
+}
+
+.icom-xz10{
+background-position: -120px -115px;
+}
+
+.icom-xz11{
+background-position: -384px 0px;
+}
+
+.icom-xz12{
+background-position: -511px 0px;
+}
